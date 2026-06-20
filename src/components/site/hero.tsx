@@ -24,10 +24,26 @@ export function Hero() {
       </div>
 
       <div className="container-quarry relative z-10 pb-16 pt-40 md:pb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <Link
+            href="/blog/formerly-galvez-stone"
+            className="mb-5 inline-flex items-center gap-2 rounded-full border border-cream/25 bg-charcoal/40 px-4 py-1.5 backdrop-blur-sm transition-colors hover:border-terracotta/60"
+          >
+            <span className="text-xs font-semibold tracking-wide text-cream">
+              Formerly Galvez Stone
+            </span>
+            <span className="text-xs text-cream/60">— same quarry, new name</span>
+          </Link>
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
           className="eyebrow mb-6 flex items-center gap-2 text-cream [text-shadow:0_1px_12px_rgba(0,0,0,0.65)]"
         >
           <MapPin className="size-3.5" />

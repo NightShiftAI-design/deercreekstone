@@ -4,7 +4,7 @@ excerpt: "Pavers are manufactured to be identical. Flagstone is quarried to be u
 date: "2026-04-12"
 author: "Deer Creek Stone"
 category: "Buying Guides"
-image: "/images/products/flagstone-hero.jpg"
+image: "/images/products/flagstone-2.jpg"
 ---
 
 The most common question we get from homeowners comparing materials: should I use natural flagstone or concrete pavers?
