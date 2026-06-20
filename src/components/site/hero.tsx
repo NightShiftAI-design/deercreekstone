@@ -16,9 +16,11 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQAAwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCy0l4Y/wDVwknvuOKwZ7fUPNbcjMT3VuK0LzV47WXbzIcHKg9D2qkZtQuz5saKqnoMVPNJ7j5Yo//Z"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/55 to-charcoal/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/30" />
       </div>
 
       <div className="container-quarry relative z-10 pb-16 pt-40 md:pb-24">
@@ -26,7 +28,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="eyebrow mb-6 flex items-center gap-2 text-sandstone"
+          className="eyebrow mb-6 flex items-center gap-2 text-cream [text-shadow:0_1px_12px_rgba(0,0,0,0.65)]"
         >
           <MapPin className="size-3.5" />
           Quarried in Dayton, Tennessee
@@ -36,11 +38,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-3xl font-display text-[2.75rem] font-medium leading-[1.04] tracking-tight text-cream sm:text-6xl md:text-7xl"
+          className="max-w-3xl font-display text-[2.75rem] font-medium leading-[1.04] tracking-tight text-cream [text-shadow:0_2px_16px_rgba(0,0,0,0.5)] sm:text-6xl md:text-7xl"
         >
           Tennessee stone,
           <br />
-          <span className="italic text-terracotta">quarried right.</span>
+          <span className="italic text-terracotta [text-shadow:0_2px_16px_rgba(0,0,0,0.6)]">quarried right.</span>
         </motion.h1>
 
         <motion.p

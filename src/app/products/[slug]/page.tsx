@@ -7,6 +7,8 @@ import { products, site } from "@/lib/site.config";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/reveal";
 import { StrataDivider } from "@/components/site/strata-divider";
+import { FaqAccordion } from "@/components/site/faq-accordion";
+import { JsonLd } from "@/components/seo/json-ld";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -56,6 +58,36 @@ export default async function ProductPage({
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: `${site.url}/products`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: product.name,
+        item: `${site.url}/products/${product.slug}`,
+      },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: product.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   return (
     <>
       <script
@@ -63,6 +95,8 @@ export default async function ProductPage({
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={faqSchema} />
 
       <section className="relative flex min-h-[60vh] items-end overflow-hidden bg-charcoal">
         <div className="absolute inset-0">
@@ -72,9 +106,11 @@ export default async function ProductPage({
             fill
             priority
             sizes="100vw"
+            placeholder="blur"
+            blurDataURL={product.heroBlurDataURL}
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-charcoal/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/30" />
         </div>
         <div className="container-quarry relative z-10 pb-16 pt-40">
           <Link
@@ -83,10 +119,10 @@ export default async function ProductPage({
           >
             ← All Products
           </Link>
-          <p className="eyebrow mt-6 text-terracotta">
+          <p className="eyebrow mt-6 text-terracotta [text-shadow:0_1px_12px_rgba(0,0,0,0.65)]">
             {product.priceIndicator} &middot; Quarried in Dayton, TN
           </p>
-          <h1 className="mt-3 max-w-2xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-cream md:text-6xl">
+          <h1 className="mt-3 max-w-2xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-cream [text-shadow:0_2px_16px_rgba(0,0,0,0.5)] md:text-6xl">
             {product.name}
           </h1>
           <p className="mt-4 max-w-lg text-lg text-cream/80">
@@ -144,6 +180,15 @@ export default async function ProductPage({
                 ))}
               </div>
             </Reveal>
+
+            <Reveal delay={0.2}>
+              <h2 className="mt-12 font-display text-2xl font-medium text-charcoal">
+                Frequently asked questions
+              </h2>
+              <div className="mt-5">
+                <FaqAccordion items={product.faqs} />
+              </div>
+            </Reveal>
           </div>
 
           <div>
@@ -175,6 +220,10 @@ export default async function ProductPage({
                   Or call{" "}
                   <a href={site.phoneHref} className="font-semibold text-terracotta">
                     {site.phone}
+                  </a>{" "}
+                  /{" "}
+                  <a href={site.phone2Href} className="font-semibold text-terracotta">
+                    {site.phone2}
                   </a>
                 </p>
               </div>

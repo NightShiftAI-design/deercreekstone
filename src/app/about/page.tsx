@@ -11,7 +11,7 @@ import { SectionHeading } from "@/components/site/section-heading";
 export const metadata: Metadata = {
   title: "Our Story",
   description:
-    "Deer Creek Stone is a family-owned natural stone quarry in Dayton, Tennessee. Learn about our quarry process and three generations of stone work.",
+    "Deer Creek Stone is a family-owned natural stone quarry in Dayton, Tennessee — formerly Galvez Stone, with 20+ years of quarrying experience.",
   alternates: { canonical: `${site.url}/about` },
 };
 
@@ -41,7 +41,7 @@ export default function AboutPage() {
         <div className="container-quarry">
           <p className="eyebrow mb-5 text-terracotta">Our Story</p>
           <h1 className="max-w-2xl font-display text-5xl font-medium leading-[1.05] tracking-tight md:text-6xl">
-            Three generations
+            {site.yearsInBusiness} years
             <br />
             <span className="italic">of Tennessee stone.</span>
           </h1>
@@ -63,24 +63,32 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="eyebrow text-terracotta">Family-owned since [year]</p>
-            {/* TODO: Replace bracketed details below with the real family
-                history once provided — founding year, founder name(s),
-                and any specific milestones worth telling. */}
+            <p className="eyebrow text-terracotta">
+              Family-owned for {site.yearsInBusiness} years
+            </p>
             <h2 className="mt-4 font-display text-3xl font-medium tracking-tight text-charcoal md:text-4xl">
-              It started with one hillside in Dayton.
+              It started with one hillside in Graysville.
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-soft">
               <p>
-                [Placeholder: Family founding story — who started Deer Creek
-                Stone, what drew them to this particular stretch of Tennessee
-                land, and what the early years of quarrying looked like.]
+                For {site.yearsInBusiness} years, this quarry operated as{" "}
+                {site.formerName}. In 2026 we rebranded to {site.name} — new
+                name, new logo, same Graysville property, same family, same
+                stone.{" "}
+                <Link
+                  href="/blog/formerly-galvez-stone"
+                  className="font-semibold text-terracotta hover:underline"
+                >
+                  Read more about the change
+                </Link>
+                .
               </p>
               <p>
-                [Placeholder: How the business has grown across generations —
-                what's stayed the same (hand-grading, direct relationships
-                with customers) and what's changed (equipment, reach into
-                Chattanooga and Knoxville markets).]
+                What's grown over two decades is reach and range — what
+                started as flagstone and treads now includes large-format
+                slabs, wall stone, and material cut for fireplaces, benches,
+                tables, and pool coping, delivered well beyond Dayton into
+                Chattanooga, Knoxville, and the greater Smokies area.
               </p>
               <p>
                 Today, we still walk the quarry by hand to grade stone before

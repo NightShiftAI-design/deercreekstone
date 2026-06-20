@@ -31,6 +31,12 @@ export function CtaBand() {
               <a href={site.phoneHref}>Call {site.phone}</a>
             </Button>
           </div>
+          <p className="mt-4 text-xs text-cream/50">
+            Or reach our alternate line:{" "}
+            <a href={site.phone2Href} className="hover:text-terracotta">
+              {site.phone2}
+            </a>
+          </p>
         </Reveal>
       </div>
     </section>

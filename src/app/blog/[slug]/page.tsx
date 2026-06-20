@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { site } from "@/lib/site.config";
 import { getPostBySlug, getAllPostSlugs } from "@/lib/blog";
 import { StrataDivider } from "@/components/site/strata-divider";
+import { JsonLd } from "@/components/seo/json-ld";
 
 export function generateStaticParams() {
   return getAllPostSlugs().map((slug) => ({ slug }));
@@ -62,6 +63,26 @@ export default async function BlogPostPage({
     mainEntityOfPage: `${site.url}/blog/${post.slug}`,
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${site.url}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `${site.url}/blog/${post.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -69,6 +90,7 @@ export default async function BlogPostPage({
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <JsonLd data={breadcrumbSchema} />
 
       <section className="bg-charcoal pb-16 pt-36 text-cream md:pt-44">
         <div className="container-quarry max-w-3xl">

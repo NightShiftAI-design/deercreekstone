@@ -67,6 +67,20 @@ export default function ContactPage() {
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
+                      <Phone className="mt-0.5 size-5 shrink-0 text-terracotta" />
+                      <div>
+                        <a
+                          href={site.phone2Href}
+                          className="font-display text-lg text-ink hover:text-terracotta"
+                        >
+                          {site.phone2}
+                        </a>
+                        <p className="text-xs text-ink-soft">
+                          Alternate line
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
                       <Mail className="mt-0.5 size-5 shrink-0 text-terracotta" />
                       <a
                         href={`mailto:${site.email}`}

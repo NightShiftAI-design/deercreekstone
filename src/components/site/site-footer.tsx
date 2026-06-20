@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { InstagramIcon, FacebookIcon } from "@/components/ui/brand-icons";
 import { site } from "@/lib/site.config";
@@ -11,16 +12,24 @@ export function SiteFooter() {
       <div className="container-quarry py-16">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <Link
-              href="/"
-              className="font-display text-2xl font-semibold tracking-tight"
-            >
-              Deer Creek <span className="text-terracotta">Stone</span>
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/images/brand/logo-white.png"
+                alt="Deer Creek Stone"
+                width={56}
+                height={56}
+                className="size-14 shrink-0"
+              />
+              <span className="font-display text-2xl font-semibold tracking-tight">
+                Deer Creek <span className="text-terracotta">Stone</span>
+              </span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-cream/65">
-              Family-owned natural stone quarry in Dayton, Tennessee. Direct
-              quarry access to premium Tennessee flagstone, slabs, and treads
-              — no middleman markup.
+              Family-owned natural stone quarry in Dayton, Tennessee —
+              formerly {site.formerName}, now {site.name}. {site.yearsInBusiness}{" "}
+              years of direct quarry access to premium Tennessee flagstone,
+              slabs, treads, and stone for fireplaces, benches, tables, and
+              pool coping — no middleman markup.
             </p>
             <div className="mt-6 flex items-center gap-4">
               <a
@@ -57,6 +66,14 @@ export function SiteFooter() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/locations"
+                  className="text-cream/70 transition-colors hover:text-terracotta"
+                >
+                  Areas We Serve
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -65,9 +82,14 @@ export function SiteFooter() {
             <ul className="space-y-3 text-sm text-cream/70">
               <li className="flex items-start gap-3">
                 <Phone className="mt-0.5 size-4 shrink-0 text-terracotta" />
-                <a href={site.phoneHref} className="hover:text-terracotta">
-                  {site.phone}
-                </a>
+                <span className="flex flex-col">
+                  <a href={site.phoneHref} className="hover:text-terracotta">
+                    {site.phone}
+                  </a>
+                  <a href={site.phone2Href} className="hover:text-terracotta">
+                    {site.phone2}
+                  </a>
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 size-4 shrink-0 text-terracotta" />
@@ -78,7 +100,10 @@ export function SiteFooter() {
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-terracotta" />
                 <span>
-                  {site.address.city}, {site.address.state}
+                  {site.address.street}
+                  <br />
+                  {site.address.city}, {site.address.state}{" "}
+                  {site.address.zip}
                 </span>
               </li>
             </ul>

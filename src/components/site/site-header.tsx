@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
@@ -44,11 +45,18 @@ export function SiteHeader() {
       )}
     >
       <div className="container-quarry flex h-20 items-center justify-between">
-        <Link
-          href="/"
-          className="font-display text-xl font-semibold tracking-tight text-cream"
-        >
-          Deer Creek <span className="text-terracotta">Stone</span>
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/images/brand/logo-white.png"
+            alt="Deer Creek Stone"
+            width={48}
+            height={48}
+            priority
+            className="size-11 shrink-0 md:size-12"
+          />
+          <span className="hidden font-display text-lg font-semibold tracking-tight text-cream sm:inline">
+            Deer Creek <span className="text-terracotta">Stone</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}
@@ -68,13 +76,21 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-5 lg:flex">
-          <a
-            href={site.phoneHref}
-            className="flex items-center gap-2 text-sm font-semibold text-cream hover:text-terracotta transition-colors"
-          >
-            <Phone className="size-4" strokeWidth={2} />
-            {site.phone}
-          </a>
+          <div className="flex flex-col items-end leading-tight">
+            <a
+              href={site.phoneHref}
+              className="text-sm font-semibold text-cream hover:text-terracotta transition-colors"
+            >
+              <Phone className="mr-1.5 inline size-3.5" strokeWidth={2} />
+              {site.phone}
+            </a>
+            <a
+              href={site.phone2Href}
+              className="text-xs text-cream/65 hover:text-terracotta transition-colors"
+            >
+              {site.phone2}
+            </a>
+          </div>
           <Button asChild variant="primary" size="sm">
             <Link href="/contact">Request a Quote</Link>
           </Button>
@@ -114,10 +130,16 @@ export function SiteHeader() {
               ))}
               <a
                 href={site.phoneHref}
-                className="flex items-center gap-2 py-4 text-cream font-semibold"
+                className="flex items-center gap-2 pt-4 text-cream font-semibold"
               >
                 <Phone className="size-4" />
                 {site.phone}
+              </a>
+              <a
+                href={site.phone2Href}
+                className="flex items-center gap-2 pb-2 pl-6 text-sm text-cream/65"
+              >
+                {site.phone2}
               </a>
               <Button asChild variant="primary" className="mt-2 w-full">
                 <Link href="/contact">Request a Quote</Link>

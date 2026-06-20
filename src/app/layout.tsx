@@ -21,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Tennessee Flagstone, Slabs & Treads — Dayton, TN`,
+    default: `${site.name} (formerly ${site.formerName}) | Tennessee Flagstone, Slabs & Treads — Dayton, TN`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -33,9 +33,16 @@ export const metadata: Metadata = {
     "stone treads Tennessee",
     "stone slabs Tennessee",
     "patio stone Dayton TN",
+    "Galvez Stone",
+    "Galvez Stone Dayton TN",
+    "Galvez Stone Graysville TN",
+    `formerly ${site.formerName}`,
+    "wall stone Tennessee",
+    "pool coping Tennessee",
   ],
   authors: [{ name: site.name }],
   creator: site.name,
+  manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -78,11 +85,24 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": `${site.url}/#business`,
   name: site.legalName,
-  alternateName: site.name,
+  alternateName: [site.name, site.formerName, `${site.formerName} (formerly)`],
   description: site.description,
   url: site.url,
   telephone: site.phone,
   email: site.email,
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: site.phone,
+      contactType: "customer service",
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: site.phone2,
+      contactType: "customer service",
+      description: "Alternate line",
+    },
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: site.address.street,
