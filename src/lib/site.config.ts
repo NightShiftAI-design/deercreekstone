@@ -13,7 +13,7 @@ export const site = {
   yearsInBusiness: "20+",
   tagline: "Tennessee Stone, Quarried Right",
   description:
-    "Family-owned natural stone quarry in Dayton, Tennessee — formerly Galvez Stone, now Deer Creek Stone — with 20+ years supplying premium Tennessee flagstone, slabs, treads, and stone for fireplaces, benches, tables, and pool coping to homeowners, landscapers, and builders across the Southeast.",
+    "Family-owned natural stone quarry in Graysville, Tennessee — formerly Galvez Stone, now Deer Creek Stone — with 20+ years supplying premium Tennessee flagstone, slabs, treads, and stone for fireplaces, benches, tables, and pool coping to homeowners, landscapers, and builders nationwide.",
   url: "https://www.deercreekstone.com",
   phone: "423-285-3164",
   phoneHref: "tel:+14232853164",
@@ -42,6 +42,9 @@ export const site = {
     "Maryville, TN",
     "Sevierville, TN",
   ],
+  nationwideShipping: true,
+  nationwideNote:
+    "We deliver and ship anywhere in the continental United States via flatbed freight, in addition to local pickup and delivery across Southeast Tennessee.",
   social: {
     instagram: "https://instagram.com/deercreekstone", // TODO confirm handle
     facebook: "https://facebook.com/deercreekstone", // TODO confirm handle
@@ -84,7 +87,7 @@ export const products: Product[] = [
     shortName: "Flagstone",
     tagline: "Irregular natural stone for patios, walkways & pool decks",
     description:
-      "Quarried directly from our Dayton property, our Tennessee flagstone is prized for its warm earth-toned color variation and durable, weather-resistant composition. Each piece is cut with natural cleft faces, giving every patio or walkway a one-of-a-kind character that manufactured pavers can't replicate.",
+      "Quarried directly from our Graysville property, our Tennessee flagstone is prized for its warm earth-toned color variation and durable, weather-resistant composition. Each piece is cut with natural cleft faces, giving every patio or walkway a one-of-a-kind character that manufactured pavers can't replicate.",
     applications: ["Patios", "Walkways", "Pool decks", "Pool coping", "Stepping stone paths"],
     specs: [
       { label: "Thickness", value: '1" – 2.5" (irregular)' },
@@ -115,7 +118,7 @@ export const products: Product[] = [
       {
         question: "Do you deliver, or do I need to pick it up?",
         answer:
-          "We offer delivery across the Southeast on flatbed trailers for full pallet orders. Will-call pickup at the quarry is also available if you'd rather select your own pieces in person.",
+          "We ship nationwide by flatbed freight for full pallet orders, in addition to local delivery across Southeast Tennessee. Will-call pickup at the quarry is also available if you'd rather select your own pieces in person.",
       },
       {
         question: "Does the color stay consistent across a whole order?",
@@ -231,9 +234,9 @@ export const products: Product[] = [
       { label: "Sold by", value: "Ton or pallet" },
     ],
     priceIndicator: "$$",
-    heroImage: "/images/quarry/process.jpg",
+    heroImage: "/images/products/wall-stone-1.jpg",
     heroBlurDataURL:
-      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQAAwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCKCOOePyju3jkMB/OrMZuIkCJhlHQ1Ck4tJdyqCpHOasNfWz4YvFkjncMGkB//2Q==",
+      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBGtZo0MbBZB2LMAo/Pn8qoSWsO13WaFAHCHLd/b29yKtXdkl7c20cjyKsm7dsbGcYxUOsadbWU8awIVUryCc9Kwu2zWysf/9k=",
     gallery: [
       "/images/products/slabs-2.jpg",
       "/images/products/flagstone-1.jpg",

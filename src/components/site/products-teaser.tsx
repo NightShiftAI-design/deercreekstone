@@ -13,8 +13,8 @@ export function ProductsTeaser() {
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
               eyebrow="What we quarry"
-              title="Three forms, one Tennessee stone."
-              description="Every piece starts at our Dayton quarry and is cut to order — flagstone for organic, irregular coverage; slabs for bold statement pieces; treads for precision steps."
+              title="Four forms, one Tennessee stone."
+              description="Every piece starts at our Graysville quarry and is cut to order — flagstone for organic, irregular coverage; slabs for bold statement pieces; treads for precision steps; wall stone for walls, benches, and seating."
             />
             <Link
               href="/products"
@@ -26,7 +26,7 @@ export function ProductsTeaser() {
           </div>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product, i) => (
             <Reveal key={product.slug} delay={i * 0.1}>
               <Link

@@ -120,7 +120,7 @@ export default async function ProductPage({
             ← All Products
           </Link>
           <p className="eyebrow mt-6 text-terracotta [text-shadow:0_1px_12px_rgba(0,0,0,0.65)]">
-            {product.priceIndicator} &middot; Quarried in Dayton, TN
+            {product.priceIndicator} &middot; Quarried in {site.address.city}, TN
           </p>
           <h1 className="mt-3 max-w-2xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-cream [text-shadow:0_2px_16px_rgba(0,0,0,0.5)] md:text-6xl">
             {product.name}

@@ -25,11 +25,12 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-cream/65">
-              Family-owned natural stone quarry in Dayton, Tennessee —
-              formerly {site.formerName}, now {site.name}. {site.yearsInBusiness}{" "}
-              years of direct quarry access to premium Tennessee flagstone,
-              slabs, treads, and stone for fireplaces, benches, tables, and
-              pool coping — no middleman markup.
+              Family-owned natural stone quarry in {site.address.city},
+              Tennessee — formerly {site.formerName}, now {site.name}.{" "}
+              {site.yearsInBusiness} years of direct quarry access to premium
+              Tennessee flagstone, slabs, treads, and stone for fireplaces,
+              benches, tables, and pool coping — delivered nationwide, no
+              middleman markup.
             </p>
             <div className="mt-6 flex items-center gap-4">
               <a
@@ -116,7 +117,7 @@ export function SiteFooter() {
             reserved.
           </p>
           <p className="flex flex-wrap items-center gap-x-2">
-            <span>Quarried &amp; built in Dayton, Tennessee.</span>
+            <span>Quarried &amp; built in {site.address.city}, Tennessee.</span>
             <span>
               Website by{" "}
               <a

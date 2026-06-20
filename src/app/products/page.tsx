@@ -9,9 +9,8 @@ import { StrataDivider } from "@/components/site/strata-divider";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Tennessee Flagstone, Slabs & Treads",
-  description:
-    "Browse Deer Creek Stone's three core products: Tennessee flagstone, large-format slabs, and precision-cut treads — all quarried in Dayton, TN.",
+  title: "Tennessee Flagstone, Slabs, Treads & Wall Stone",
+  description: `Browse Deer Creek Stone's four core products: Tennessee flagstone, large-format slabs, precision-cut treads, and wall stone — all quarried in ${site.address.city}, TN and shipped nationwide.`,
   alternates: { canonical: `${site.url}/products` },
 };
 
@@ -22,14 +21,15 @@ export default function ProductsPage() {
         <div className="container-quarry">
           <p className="eyebrow mb-5 text-terracotta">Our Stone</p>
           <h1 className="max-w-2xl font-display text-5xl font-medium leading-[1.05] tracking-tight md:text-6xl">
-            Three forms.
+            Four forms.
             <br />
             <span className="italic">One Tennessee quarry.</span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/75 md:text-lg">
-            Every product below is cut from stone we quarry ourselves in
-            Dayton. Pricing indicators give a relative sense of investment —
-            request a quote for exact, project-specific pricing.
+            Every product below is cut from stone we quarry ourselves in{" "}
+            {site.address.city}, TN, then ship nationwide. Pricing indicators
+            give a relative sense of investment — request a quote for exact,
+            project-specific pricing.
           </p>
         </div>
       </section>

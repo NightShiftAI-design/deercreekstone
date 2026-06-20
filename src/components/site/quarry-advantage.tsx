@@ -3,22 +3,23 @@ import Image from "next/image";
 import { ArrowRight, Truck, Users, Gem } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/reveal";
+import { site } from "@/lib/site.config";
 
 const points = [
   {
     icon: Gem,
     title: "Direct from our quarry",
-    body: "No brokers, no distributors. Stone moves straight from our Dayton property to your job site.",
+    body: "No brokers, no distributors. Stone moves straight from our Graysville property to your job site.",
   },
   {
     icon: Users,
-    title: "Family-owned, three generations",
+    title: `${site.yearsInBusiness} years quarrying Tennessee stone`,
     body: "We've worked this stone for decades and know every seam of our quarry by hand.",
   },
   {
     icon: Truck,
-    title: "Serving the Southeast",
-    body: "Dayton, Chattanooga, Knoxville, Cleveland, and Athens — with delivery available.",
+    title: "Delivered nationwide",
+    body: "Local pickup and delivery across Southeast Tennessee, plus flatbed freight shipping anywhere in the continental US.",
   },
 ];
 
@@ -29,8 +30,8 @@ export function QuarryAdvantage() {
         <Reveal>
           <div className="relative aspect-[4/5] overflow-hidden lg:aspect-[3/4]">
             <Image
-              src="/images/quarry/process.jpg"
-              alt="Hand-stacked Tennessee flagstone wall at the Deer Creek Stone quarry"
+              src="/images/quarry/extraction-2.jpg"
+              alt="Excavator working an exposed Tennessee sandstone ledge at the Deer Creek Stone quarry"
               fill
               sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-cover"

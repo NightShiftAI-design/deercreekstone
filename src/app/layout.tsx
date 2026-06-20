@@ -21,13 +21,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} (formerly ${site.formerName}) | Tennessee Flagstone, Slabs & Treads — Dayton, TN`,
+    default: `${site.name} (formerly ${site.formerName}) | Tennessee Flagstone, Slabs, Treads & Wall Stone — ${site.address.city}, TN`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
   keywords: [
     "Tennessee flagstone",
-    "Dayton TN stone quarry",
+    `${site.address.city} TN stone quarry`,
+    "stone quarry near Dayton TN",
     "natural stone supplier Tennessee",
     "flagstone Chattanooga",
     "stone treads Tennessee",
@@ -39,6 +40,7 @@ export const metadata: Metadata = {
     `formerly ${site.formerName}`,
     "wall stone Tennessee",
     "pool coping Tennessee",
+    "nationwide stone shipping",
   ],
   authors: [{ name: site.name }],
   creator: site.name,
@@ -111,7 +113,10 @@ const localBusinessSchema = {
     postalCode: site.address.zip,
     addressCountry: "US",
   },
-  areaServed: site.serviceAreas.map((a) => ({ "@type": "City", name: a })),
+  areaServed: [
+    { "@type": "Country", name: "United States" },
+    ...site.serviceAreas.map((a) => ({ "@type": "City", name: a })),
+  ],
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",

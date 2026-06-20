@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 
 export const metadata: Metadata = {
   title: "Areas We Serve",
-  description: `Tennessee flagstone, slabs, treads, and wall stone delivered across the Southeast from our quarry in ${site.address.city}, TN.`,
+  description: `Tennessee flagstone, slabs, treads, and wall stone shipped nationwide from our quarry in ${site.address.city}, TN.`,
   alternates: { canonical: `${site.url}/locations` },
 };
 
@@ -36,11 +36,12 @@ export default function LocationsIndexPage() {
         <div className="container-quarry max-w-3xl">
           <p className="eyebrow text-terracotta">Areas We Serve</p>
           <h1 className="mt-3 font-display text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl">
-            Tennessee stone, delivered across the Southeast.
+            Tennessee stone, delivered nationwide.
           </h1>
           <p className="mt-5 max-w-xl text-cream/70">
-            Quarried in {site.address.city}, TN. Pick up in person or have a
-            full order delivered to your job site.
+            Quarried in {site.address.city}, TN. Pick up in person, get
+            local delivery across Southeast Tennessee, or have a full order
+            shipped anywhere in the U.S. by flatbed freight.
           </p>
         </div>
       </section>
@@ -81,7 +82,8 @@ export default function LocationsIndexPage() {
             >
               Reach out
             </Link>{" "}
-            — we deliver well beyond this list across the Southeast.
+            — we ship nationwide well beyond this list, in addition to our
+            standard local-TN delivery area.
           </p>
         </div>
       </section>

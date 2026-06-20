@@ -26,7 +26,7 @@ Everything that actually matters to the people we work with:
 
 ## Why rebrand after 20+ years?
 
-Honestly — the Galvez Stone name had run its course, and we wanted a brand that better reflected who we are today: a family-owned Tennessee quarry supplying homeowners, landscapers, and builders across the Southeast with stone for everything from patios and pool coping to fireplaces, benches, and tables. Deer Creek Stone felt like a better fit for where the business has grown.
+Honestly — the Galvez Stone name had run its course, and we wanted a brand that better reflected who we are today: a family-owned Tennessee quarry shipping nationwide to homeowners, landscapers, and builders, with stone for everything from patios and pool coping to fireplaces, benches, and tables. Deer Creek Stone felt like a better fit for where the business has grown.
 
 ## Still have questions?
 

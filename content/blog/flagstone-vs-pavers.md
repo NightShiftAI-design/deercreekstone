@@ -23,4 +23,4 @@ Pavers are often cheaper up front. Flagstone typically costs more per square foo
 
 ---
 
-*Want to see and feel the difference? [Request material samples](/contact) or visit our Dayton quarry.*
+*Want to see and feel the difference? [Request material samples](/contact) or visit our Graysville quarry.*

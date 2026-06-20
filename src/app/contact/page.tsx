@@ -7,8 +7,7 @@ import { Reveal } from "@/components/site/reveal";
 
 export const metadata: Metadata = {
   title: "Contact & Request a Quote",
-  description:
-    "Request a quote, schedule a quarry visit, or order material samples from Deer Creek Stone in Dayton, Tennessee. Call 423-285-3164.",
+  description: `Request a quote, schedule a quarry visit, or order material samples from Deer Creek Stone in ${site.address.city}, Tennessee. We ship nationwide. Call ${site.phone}.`,
   alternates: { canonical: `${site.url}/contact` },
 };
 
