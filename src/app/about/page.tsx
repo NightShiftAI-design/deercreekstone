@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { site } from "@/lib/site.config";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/reveal";
 import { StrataDivider } from "@/components/site/strata-divider";
@@ -53,9 +53,12 @@ export default function AboutPage() {
         <div className="container-quarry grid gap-14 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden">
-              <PlaceholderImage
-                label="Family portrait or working at the quarry"
-                variant="warm"
+              <Image
+                src="/images/team/facility.jpg"
+                alt="The Deer Creek Stone facility and yard in Dayton, Tennessee"
+                fill
+                sizes="(min-width: 1024px) 45vw, 90vw"
+                className="object-cover"
               />
             </div>
           </Reveal>

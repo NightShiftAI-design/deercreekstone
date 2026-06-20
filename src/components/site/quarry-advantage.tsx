@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Truck, Users, Gem } from "lucide-react";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/reveal";
 
@@ -28,9 +28,12 @@ export function QuarryAdvantage() {
       <div className="container-quarry grid gap-16 lg:grid-cols-2 lg:items-center">
         <Reveal>
           <div className="relative aspect-[4/5] overflow-hidden lg:aspect-[3/4]">
-            <PlaceholderImage
-              label="Quarry process — cutting or stacking stone, working hands"
-              variant="warm"
+            <Image
+              src="/images/quarry/process.jpg"
+              alt="Hand-stacked Tennessee flagstone wall at the Deer Creek Stone quarry"
+              fill
+              sizes="(min-width: 1024px) 40vw, 90vw"
+              className="object-cover"
             />
           </div>
         </Reveal>

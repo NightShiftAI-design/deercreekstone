@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { site } from "@/lib/site.config";
 import { getPostBySlug, getAllPostSlugs } from "@/lib/blog";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { StrataDivider } from "@/components/site/strata-divider";
 
 export function generateStaticParams() {
@@ -91,8 +91,14 @@ export default async function BlogPostPage({
 
       <article className="bg-cream py-16 md:py-24">
         <div className="container-quarry max-w-3xl">
-          <div className="aspect-[16/9] overflow-hidden">
-            <PlaceholderImage label={`${post.title} — featured image`} />
+          <div className="relative aspect-[16/9] overflow-hidden">
+            <Image
+              src={post.image}
+              alt={`${post.title} — featured image`}
+              fill
+              sizes="(min-width: 1024px) 768px, 100vw"
+              className="object-cover"
+            />
           </div>
 
           <div

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowRight, Check } from "lucide-react";
 import { products, site } from "@/lib/site.config";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/reveal";
 import { StrataDivider } from "@/components/site/strata-divider";
@@ -66,7 +66,14 @@ export default async function ProductPage({
 
       <section className="relative flex min-h-[60vh] items-end overflow-hidden bg-charcoal">
         <div className="absolute inset-0">
-          <PlaceholderImage label={`${product.name} hero`} variant="dark" />
+          <Image
+            src={product.heroImage}
+            alt={`${product.name} hero — Deer Creek Stone`}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-charcoal/10" />
         </div>
         <div className="container-quarry relative z-10 pb-16 pt-40">
@@ -125,8 +132,13 @@ export default async function ProductPage({
               <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 {product.gallery.map((img, i) => (
                   <div key={img} className="aspect-square overflow-hidden">
-                    <PlaceholderImage
-                      label={`${product.shortName} gallery ${i + 1}`}
+                    <Image
+                      src={img}
+                      alt={`${product.shortName} — detail ${i + 1}`}
+                      width={600}
+                      height={600}
+                      sizes="(min-width: 640px) 33vw, 100vw"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                 ))}

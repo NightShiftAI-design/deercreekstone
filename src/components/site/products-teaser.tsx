@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { products } from "@/lib/site.config";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { SectionHeading } from "@/components/site/section-heading";
 import { Reveal } from "@/components/site/reveal";
 
@@ -35,8 +35,12 @@ export function ProductsTeaser() {
               >
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <div className="h-full w-full transition-transform duration-700 ease-out group-hover:scale-105">
-                    <PlaceholderImage
-                      label={`${product.shortName} — product photo`}
+                    <Image
+                      src={product.heroImage}
+                      alt={`${product.name} — Deer Creek Stone`}
+                      fill
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                      className="object-cover"
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/0 to-transparent" />

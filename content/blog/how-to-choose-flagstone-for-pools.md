@@ -4,7 +4,7 @@ excerpt: "Not all flagstone handles pool environments equally well. Here's what 
 date: "2026-05-01"
 author: "Deer Creek Stone"
 category: "Buying Guides"
-image: "/images/products/flagstone-hero.jpg"
+image: "/images/blog/pool-deck-feature.jpg"
 ---
 
 Choosing flagstone for a pool deck comes down to three things: slip resistance, heat retention, and how the stone holds up to constant water exposure. Tennessee flagstone, with its natural cleft finish, has a built-in texture that performs well underfoot — even wet.

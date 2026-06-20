@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { products, site } from "@/lib/site.config";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { SectionHeading } from "@/components/site/section-heading";
 import { Reveal } from "@/components/site/reveal";
 import { StrataDivider } from "@/components/site/strata-divider";
@@ -45,7 +45,13 @@ export default function ProductsPage() {
                 }`}
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <PlaceholderImage label={`${product.name} — hero photo`} />
+                  <Image
+                    src={product.heroImage}
+                    alt={`${product.name} — Deer Creek Stone`}
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <p className="eyebrow text-terracotta">

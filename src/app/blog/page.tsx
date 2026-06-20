@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/lib/site.config";
 import { getAllPostsMeta } from "@/lib/blog";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { Reveal } from "@/components/site/reveal";
 import { StrataDivider } from "@/components/site/strata-divider";
 
@@ -52,7 +52,14 @@ export default function BlogPage() {
                   <Link href={`/blog/${post.slug}`} className="group block">
                     <div className="aspect-[4/3] overflow-hidden">
                       <div className="h-full w-full transition-transform duration-700 ease-out group-hover:scale-105">
-                        <PlaceholderImage label={post.title} />
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          width={800}
+                          height={600}
+                          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                          className="h-full w-full object-cover"
+                        />
                       </div>
                     </div>
                     <p className="eyebrow mt-5 text-terracotta">

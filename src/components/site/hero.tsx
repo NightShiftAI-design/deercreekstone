@@ -1,22 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
 
 export function Hero() {
   return (
     <section className="relative flex min-h-[92vh] items-end overflow-hidden bg-charcoal">
-      {/* Hero photo — replace PlaceholderImage with next/image once real
-          quarry/stone photography is available. Recommend a wide moody
-          shot of cut flagstone stacks or the quarry face at golden hour. */}
       <div className="absolute inset-0">
-        <PlaceholderImage
-          label="Hero — Quarry face or stacked flagstone, golden hour"
-          variant="dark"
-          className="h-full w-full"
+        <Image
+          src="/images/hero/quarry-yard.jpg"
+          alt="Stacked Tennessee flagstone and equipment at the Deer Creek Stone quarry yard in Dayton, TN"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/55 to-charcoal/10" />
       </div>
