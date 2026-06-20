@@ -41,7 +41,11 @@ export const site = {
   },
   // Permalinks of real Instagram posts to embed via the official widget.
   // Add more URLs here to grow the strip — no rebuild logic needed beyond this array.
-  instagramPosts: ["https://www.instagram.com/p/CoC96E_upyN/"],
+  instagramPosts: [
+    "https://www.instagram.com/p/CoC96E_upyN/",
+    "https://www.instagram.com/p/DYz8hyYmhUj/",
+    "https://www.instagram.com/p/Cu-RBhpO1SW/",
+  ],
   nav: [
     { label: "Products", href: "/products" },
     { label: "Portfolio", href: "/portfolio" },
