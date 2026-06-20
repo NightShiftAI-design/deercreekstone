@@ -15,6 +15,7 @@ const categories: Array<Project["category"] | "All"> = [
   "Fireplace",
   "Pool Deck",
   "Retaining Wall",
+  "Wall Veneer",
 ];
 
 // Remaining generic /images/projects/project-N.jpg paths are still

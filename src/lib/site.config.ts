@@ -103,6 +103,7 @@ export const products: Product[] = [
       "/images/products/flagstone-1.jpg",
       "/images/products/flagstone-2.jpg",
       "/images/products/flagstone-3.jpg",
+      "/images/quarry/quarry-flagstone-pallets.jpg",
     ],
     faqs: [
       {
@@ -149,6 +150,7 @@ export const products: Product[] = [
       "/images/products/slabs-1.jpg",
       "/images/products/slabs-2.jpg",
       "/images/products/slabs-3.jpg",
+      "/images/products/slabs-4.jpg",
     ],
     faqs: [
       {
@@ -195,6 +197,7 @@ export const products: Product[] = [
       "/images/products/treads-1.jpg",
       "/images/products/treads-2.jpg",
       "/images/products/treads-3.jpg",
+      "/images/products/treads-4.jpg",
     ],
     faqs: [
       {
@@ -238,9 +241,9 @@ export const products: Product[] = [
     heroBlurDataURL:
       "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAMABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBGtZo0MbBZB2LMAo/Pn8qoSWsO13WaFAHCHLd/b29yKtXdkl7c20cjyKsm7dsbGcYxUOsadbWU8awIVUryCc9Kwu2zWysf/9k=",
     gallery: [
-      "/images/products/slabs-2.jpg",
-      "/images/products/flagstone-1.jpg",
-      "/images/products/treads-2.jpg",
+      "/images/products/wall-stone-2.jpg",
+      "/images/quarry/extraction-4.jpg",
+      "/images/quarry/extraction-5.jpg",
     ],
     faqs: [
       {
@@ -270,7 +273,7 @@ export const products: Product[] = [
 export type Project = {
   slug: string;
   title: string;
-  category: "Patio" | "Walkway" | "Steps" | "Fireplace" | "Pool Deck" | "Retaining Wall";
+  category: "Patio" | "Walkway" | "Steps" | "Fireplace" | "Pool Deck" | "Retaining Wall" | "Wall Veneer";
   location: string;
   image: string;
   description: string;
@@ -303,6 +306,15 @@ export const projects: Project[] = [
     image: "/images/projects/staircase.jpg",
     description:
       "Wide flagstone stair treads with a cleft-face finish, set into a natural stone-clad retaining wall and landing.",
+  },
+  {
+    slug: "stone-veneer-wall-residence",
+    title: "Stone Veneer Wall — In Progress",
+    category: "Wall Veneer",
+    location: "Private Residence",
+    image: "/images/projects/stone-veneer-wall.jpg",
+    description:
+      "A home build currently underway, using our stone as full-coverage exterior wall veneer.",
   },
   {
     slug: "placeholder-4",

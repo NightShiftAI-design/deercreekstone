@@ -17,8 +17,18 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <>
-      <section className="bg-charcoal pb-20 pt-36 text-cream md:pb-28 md:pt-44">
-        <div className="container-quarry">
+      <section className="relative overflow-hidden bg-charcoal pb-20 pt-36 text-cream md:pb-28 md:pt-44">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/quarry/delivery-truck-2.jpg"
+            alt="A flatbed truck loaded with Deer Creek Stone pallets at the quarry"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-charcoal/85" />
+        </div>
+        <div className="container-quarry relative z-10">
           <p className="eyebrow mb-5 text-terracotta">Our Stone</p>
           <h1 className="max-w-2xl font-display text-5xl font-medium leading-[1.05] tracking-tight md:text-6xl">
             Four forms.

@@ -6,7 +6,7 @@ import { StrataDivider } from "@/components/site/strata-divider";
 export const metadata: Metadata = {
   title: "Project Portfolio",
   description:
-    "Browse completed patios, walkways, steps, fireplaces, and pool decks built with Deer Creek Stone Tennessee flagstone and slabs.",
+    "Browse completed patios, walkways, steps, fireplaces, pool decks, and stone veneer walls built with Deer Creek Stone Tennessee flagstone, slabs, and wall stone.",
   alternates: { canonical: `${site.url}/portfolio` },
 };
 
@@ -22,8 +22,8 @@ export default function PortfolioPage() {
             <span className="italic">Deer Creek Stone.</span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/75 md:text-lg">
-            Filter by project type to see how our flagstone, slabs, and
-            treads come together in real Southeast Tennessee homes.
+            Filter by project type to see how our flagstone, slabs, treads,
+            and wall stone come together on real job sites.
           </p>
         </div>
       </section>

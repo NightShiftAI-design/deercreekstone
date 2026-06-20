@@ -23,7 +23,7 @@ export function ProjectsTeaser() {
             <SectionHeading
               eyebrow="Real projects, real stone"
               title="Built with Deer Creek Stone."
-              description="A look at how homeowners and contractors across the Southeast are putting our flagstone, slabs, and treads to work."
+              description="A look at how homeowners and contractors are putting our flagstone, slabs, treads, and wall stone to work."
             />
             <Link
               href="/portfolio"

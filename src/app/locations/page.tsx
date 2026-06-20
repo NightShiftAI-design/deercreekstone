@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, MapPin } from "lucide-react";
 import { site } from "@/lib/site.config";
 import { locationPages } from "@/lib/locations";
@@ -32,8 +33,18 @@ export default function LocationsIndexPage() {
     <>
       <JsonLd data={breadcrumbSchema} />
 
-      <section className="bg-charcoal pb-16 pt-36 text-cream md:pt-44">
-        <div className="container-quarry max-w-3xl">
+      <section className="relative overflow-hidden bg-charcoal pb-16 pt-36 text-cream md:pt-44">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/quarry/extraction-6.jpg"
+            alt="Excavator clearing ground at the Deer Creek Stone quarry"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-charcoal/85" />
+        </div>
+        <div className="container-quarry relative z-10 max-w-3xl">
           <p className="eyebrow text-terracotta">Areas We Serve</p>
           <h1 className="mt-3 font-display text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl">
             Tennessee stone, delivered nationwide.
