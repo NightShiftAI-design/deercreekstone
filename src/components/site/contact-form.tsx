@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { products } from "@/lib/site.config";
+import { products, site } from "@/lib/site.config";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -18,14 +18,38 @@ export function ContactForm() {
     e.preventDefault();
     setStatus("submitting");
 
-    // TODO: wire this up to a real submission endpoint — e.g. a Next.js
-    // Route Handler that emails the team, or a service like Formspree /
-    // Resend / Web3Forms. For now this simulates a network request so
-    // the UX (loading → success state) is fully built and ready to wire.
     const formData = new FormData(e.currentTarget);
-    void formData;
+    const name = formData.get("name")?.toString().trim() ?? "";
+    const phone = formData.get("phone")?.toString().trim() ?? "";
+    const email = formData.get("email")?.toString().trim() ?? "";
+    const productSlug = formData.get("product")?.toString() ?? "";
+    const location = formData.get("location")?.toString().trim() ?? "";
+    const message = formData.get("message")?.toString().trim() ?? "";
+    const wantsSamples = formData.get("samples") === "on";
 
-    await new Promise((res) => setTimeout(res, 900));
+    const productName =
+      products.find((p) => p.slug === productSlug)?.name ||
+      (productSlug === "not-sure" ? "Not sure yet" : "");
+
+    const lines = [
+      `Quote request from ${name || "—"}`,
+      productName && `Interested in: ${productName}`,
+      location && `Project location: ${location}`,
+      message && `Details: ${message}`,
+      wantsSamples && "Please also send material samples.",
+      (phone || email) &&
+        `Reach me at: ${[phone, email].filter(Boolean).join(" / ")}`,
+    ].filter(Boolean);
+
+    const body = encodeURIComponent(lines.join("\n"));
+    // iOS requires "&" before body, Android/most others expect "?"
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const separator = isIOS ? "&" : "?";
+    const smsLink = `sms:${site.phoneHref.replace("tel:", "")}${separator}body=${body}`;
+
+    window.location.href = smsLink;
+
+    await new Promise((res) => setTimeout(res, 600));
     setStatus("success");
   }
 
@@ -38,11 +62,12 @@ export function ContactForm() {
       >
         <CheckCircle2 className="size-12 text-olive" strokeWidth={1.5} />
         <h3 className="mt-5 font-display text-2xl font-medium text-charcoal">
-          Quote request received
+          Opening your messages app
         </h3>
         <p className="mt-2 max-w-sm text-sm text-ink-soft">
-          We'll review your project details and get back to you within one
-          business day. For anything urgent, call us directly.
+          Your project details are pre-filled — just hit send to text us
+          directly at {site.phone}. If nothing opened, call or text us at
+          that number directly.
         </p>
       </motion.div>
     );
@@ -156,14 +181,15 @@ export function ContactForm() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              Request a Quote
+              Text This Request to Us
             </motion.span>
           )}
         </AnimatePresence>
       </Button>
 
       <p className="text-center text-xs text-ink-soft">
-        We typically respond within one business day.
+        Tapping submit opens your messages app with these details pre-filled
+        to {site.phone}.
       </p>
     </form>
   );

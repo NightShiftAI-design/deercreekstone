@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects, type Project } from "@/lib/site.config";
 import { PlaceholderImage } from "@/components/ui/placeholder-image";
@@ -15,6 +16,12 @@ const categories: Array<Project["category"] | "All"> = [
   "Pool Deck",
   "Retaining Wall",
 ];
+
+// Remaining generic /images/projects/project-N.jpg paths are still
+// unfilled placeholders — fall back to PlaceholderImage for those
+// until real completed-install photos are provided.
+const isUnfilledPlaceholder = (path: string) =>
+  /\/images\/projects\/project-\d\.jpg$/.test(path);
 
 export function PortfolioGrid() {
   const [active, setActive] = useState<(typeof categories)[number]>("All");
@@ -65,7 +72,17 @@ export function PortfolioGrid() {
               className="group relative aspect-[4/3] overflow-hidden"
             >
               <div className="h-full w-full transition-transform duration-700 ease-out group-hover:scale-105">
-                <PlaceholderImage label={project.title} />
+                {isUnfilledPlaceholder(project.image) ? (
+                  <PlaceholderImage label={project.title} />
+                ) : (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                )}
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/15 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">

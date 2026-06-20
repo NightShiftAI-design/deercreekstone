@@ -39,6 +39,9 @@ export const site = {
     instagram: "https://instagram.com/deercreekstone", // TODO confirm handle
     facebook: "https://facebook.com/deercreekstone", // TODO confirm handle
   },
+  // Permalinks of real Instagram posts to embed via the official widget.
+  // Add more URLs here to grow the strip — no rebuild logic needed beyond this array.
+  instagramPosts: ["https://www.instagram.com/p/CoC96E_upyN/"],
   nav: [
     { label: "Products", href: "/products" },
     { label: "Portfolio", href: "/portfolio" },
@@ -141,20 +144,22 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "placeholder-1",
-    title: "Flagstone Patio — Soddy-Daisy",
+    slug: "riverdance-restaurant-patio",
+    title: "Riverdance Restaurant Patio",
     category: "Patio",
-    location: "Soddy-Daisy, TN",
-    image: "/images/projects/project-1.jpg",
-    description: "Full flagstone patio with seat wall using Tennessee tan flagstone.",
+    location: "Guild, TN",
+    image: "/images/projects/riverdance-restaurant.jpg",
+    description:
+      "Mountaintop restaurant patio overlooking the Tennessee River valley, set in flagstone hardscape beneath a stone-clad timber-frame pavilion with an embedded illuminated map feature.",
   },
   {
-    slug: "placeholder-2",
-    title: "Pool Deck Surround — Chattanooga",
-    category: "Pool Deck",
-    location: "Chattanooga, TN",
-    image: "/images/projects/project-2.jpg",
-    description: "Heat-tested flagstone pool deck, cleft finish for slip resistance.",
+    slug: "mountain-entry-patio-staircase",
+    title: "Mountain Home Entry Patio & Staircase",
+    category: "Patio",
+    location: "Private Residence",
+    image: "/images/projects/entry-patio.jpg",
+    description:
+      "Full flagstone entry patio with an integrated grand staircase, fit to natural stone veneer and timber siding.",
   },
   {
     slug: "placeholder-3",

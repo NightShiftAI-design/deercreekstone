@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { InstagramIcon } from "@/components/ui/brand-icons";
 import { Button } from "@/components/ui/button";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
+import { InstagramEmbed } from "@/components/site/instagram-embed";
 import { site } from "@/lib/site.config";
 import { Reveal } from "@/components/site/reveal";
 
@@ -38,7 +38,6 @@ export function CtaBand() {
 }
 
 export function InstagramStrip() {
-  const tiles = Array.from({ length: 6 });
   return (
     <section className="bg-cream py-20">
       <div className="container-quarry">
@@ -58,19 +57,11 @@ export function InstagramStrip() {
             Follow @deercreekstone
           </a>
         </div>
-        <div className="grid grid-cols-3 gap-3 md:grid-cols-6">
-          {tiles.map((_, i) => (
-            <div key={i} className="aspect-square overflow-hidden">
-              <PlaceholderImage label={`IG post ${i + 1}`} />
-            </div>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {site.instagramPosts.map((permalink) => (
+            <InstagramEmbed key={permalink} permalink={permalink} />
           ))}
         </div>
-        <p className="mt-4 text-xs text-ink-soft">
-          {/* TODO: replace with a live Instagram embed (e.g. SnapWidget,
-              Elfsight, or the official Instagram Graph API) once the
-              client provides API access or chooses an embed provider. */}
-          Instagram feed placeholder — connect a live embed before launch.
-        </p>
       </div>
     </section>
   );
