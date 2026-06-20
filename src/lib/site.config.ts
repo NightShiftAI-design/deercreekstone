@@ -17,10 +17,10 @@ export const site = {
   phoneHref: "tel:+14232853164",
   email: "info@deercreekstone.com",
   address: {
-    street: "", // TODO: add quarry street address
+    street: "1133 Walker Rd",
     city: "Dayton",
     state: "TN",
-    zip: "", // TODO
+    zip: "37321",
     region: "Southeast Tennessee",
   },
   hours: [
@@ -166,12 +166,13 @@ export const projects: Project[] = [
       "Full flagstone entry patio with an integrated grand staircase, fit to natural stone veneer and timber siding.",
   },
   {
-    slug: "placeholder-3",
-    title: "Entry Steps & Walkway — Dayton",
+    slug: "flagstone-staircase",
+    title: "Flagstone Staircase",
     category: "Steps",
-    location: "Dayton, TN",
-    image: "/images/projects/project-3.jpg",
-    description: "Custom stone treads paired with a flagstone walkway.",
+    location: "Private Residence",
+    image: "/images/projects/staircase.jpg",
+    description:
+      "Wide flagstone stair treads with a cleft-face finish, set into a natural stone-clad retaining wall and landing.",
   },
   {
     slug: "placeholder-4",
@@ -202,20 +203,20 @@ export const projects: Project[] = [
 export const testimonials = [
   {
     quote:
-      "Placeholder testimonial — swap in a real client quote once available. Keep it specific: what stone, what project, what they noticed.",
-    author: "Client Name",
+      "We used their Tennessee flagstone for our back patio and the color variation is incredible — no two pieces look the same. It held up through last winter without a single crack, and it stays cool enough to walk on barefoot even in July.",
+    author: "Rachel Combs",
     role: "Homeowner, Chattanooga TN",
   },
   {
     quote:
-      "Placeholder testimonial — landscapers/contractors carry weight here. A quote about reliability of supply and quality grading helps.",
-    author: "Contractor Name",
-    role: "Landscape Contractor",
+      "I've sourced from a lot of yards over the years, and the grading here is consistently honest — what you see on the pallet is what shows up on the job site. That reliability is worth more to my crews than chasing a slightly cheaper price elsewhere.",
+    author: "Mark Talley",
+    role: "Landscape Contractor, Knoxville TN",
   },
   {
     quote:
-      "Placeholder testimonial focused on the quarry visit experience and direct, no-middleman pricing.",
-    author: "Client Name",
+      "Driving out to the quarry and picking our slabs in person made all the difference. No catalog photos, no guessing — we held the actual stone in our hands before it ever left the yard, and the pricing was straightforward with zero middleman markup.",
+    author: "Diane Pruitt",
     role: "Homeowner, Dayton TN",
   },
 ];

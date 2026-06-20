@@ -90,7 +90,20 @@ export function SiteFooter() {
             © {new Date().getFullYear()} {site.legalName}. All rights
             reserved.
           </p>
-          <p>Quarried &amp; built in Dayton, Tennessee.</p>
+          <p className="flex flex-wrap items-center gap-x-2">
+            <span>Quarried &amp; built in Dayton, Tennessee.</span>
+            <span>
+              Website by{" "}
+              <a
+                href="https://gshyamvp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream/70 underline underline-offset-2 transition-colors hover:text-terracotta"
+              >
+                GVP
+              </a>
+            </span>
+          </p>
         </div>
       </div>
     </footer>

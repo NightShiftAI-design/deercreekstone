@@ -78,8 +78,10 @@ export default function ContactPage() {
                     <li className="flex items-start gap-3">
                       <MapPin className="mt-0.5 size-5 shrink-0 text-terracotta" />
                       <span className="text-ink">
-                        {site.address.city}, {site.address.state}
-                        {/* TODO: add full street address once confirmed */}
+                        {site.address.street}
+                        <br />
+                        {site.address.city}, {site.address.state}{" "}
+                        {site.address.zip}
                       </span>
                     </li>
                   </ul>
@@ -117,12 +119,12 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Map embed — replace src with the quarry's actual
-                    Google Maps embed URL once the address is confirmed. */}
                 <div className="aspect-[4/3] w-full border border-ink/10 bg-cream-warm">
                   <iframe
                     title="Deer Creek Stone location"
-                    src="https://www.google.com/maps?q=Dayton,TN&output=embed"
+                    src={`https://www.google.com/maps?q=${encodeURIComponent(
+                      `${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.zip}`
+                    )}&output=embed`}
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

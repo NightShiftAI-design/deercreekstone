@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   },
 };
 
-// LocalBusiness schema — placeholder address/coords flagged for client to confirm.
+// LocalBusiness schema — geo coordinates (lat/long) still TODO if precise map pin matters.
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -85,8 +85,10 @@ const localBusinessSchema = {
   email: site.email,
   address: {
     "@type": "PostalAddress",
+    streetAddress: site.address.street,
     addressLocality: site.address.city,
     addressRegion: site.address.state,
+    postalCode: site.address.zip,
     addressCountry: "US",
   },
   areaServed: site.serviceAreas.map((a) => ({ "@type": "City", name: a })),
