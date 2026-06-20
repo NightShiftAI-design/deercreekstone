@@ -37,7 +37,7 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-colors duration-300",
+        "fixed inset-x-0 top-0 z-50 w-full transition-colors duration-300",
         scrolled || open
           ? "bg-charcoal/95 backdrop-blur-sm shadow-[0_1px_0_0_rgba(245,240,230,0.08)]"
           : "bg-transparent"
