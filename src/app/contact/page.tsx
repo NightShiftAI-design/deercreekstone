@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { site } from "@/lib/site.config";
 import { ContactForm } from "@/components/site/contact-form";
@@ -14,14 +15,27 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-charcoal pb-20 pt-36 text-cream md:pb-28 md:pt-44">
-        <div className="container-quarry">
-          <p className="eyebrow mb-5 text-terracotta">Get in Touch</p>
-          <h1 className="max-w-2xl font-display text-5xl font-medium leading-[1.05] tracking-tight md:text-6xl">
-            Let's talk
-            <br />
-            <span className="italic">about your project.</span>
-          </h1>
+      <section className="relative overflow-hidden bg-charcoal pb-20 pt-36 text-cream md:pb-28 md:pt-44">
+        <div className="container-quarry relative z-10 flex items-center justify-between gap-8">
+          <div>
+            <p className="eyebrow mb-5 text-terracotta">Get in Touch</p>
+            <h1 className="max-w-2xl font-display text-5xl font-medium leading-[1.05] tracking-tight md:text-6xl">
+              Let's talk
+              <br />
+              <span className="italic">about your project.</span>
+            </h1>
+          </div>
+          {/* Large logo — desktop only */}
+          <div className="hidden lg:block shrink-0 opacity-10">
+            <Image
+              src="/images/brand/logo-white.png"
+              alt=""
+              aria-hidden="true"
+              width={320}
+              height={320}
+              className="size-64 xl:size-80"
+            />
+          </div>
         </div>
       </section>
       <StrataDivider />
