@@ -26,14 +26,14 @@ export default function ContactPage() {
             </h1>
           </div>
           {/* Large logo — desktop only */}
-          <div className="hidden lg:block shrink-0 opacity-10">
+          <div className="hidden lg:flex lg:flex-1 items-center justify-center opacity-15">
             <Image
               src="/images/brand/logo-white.png"
               alt=""
               aria-hidden="true"
               width={320}
               height={320}
-              className="size-64 xl:size-80"
+              className="size-80 xl:size-96"
             />
           </div>
         </div>
