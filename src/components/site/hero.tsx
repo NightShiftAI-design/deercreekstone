@@ -23,7 +23,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/30" />
       </div>
 
-      <div className="container-quarry relative z-10 pb-16 pt-40 md:pb-24">
+      <div className="container-quarry relative z-10 pb-16 pt-28 md:pb-24 md:pt-40">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

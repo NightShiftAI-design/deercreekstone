@@ -12,15 +12,7 @@ import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -37,12 +29,7 @@ export function SiteHeader() {
 
   return (
     <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 w-full transition-colors duration-300",
-        scrolled || open
-          ? "bg-charcoal/95 backdrop-blur-sm shadow-[0_1px_0_0_rgba(245,240,230,0.08)]"
-          : "bg-transparent"
-      )}
+      className="fixed inset-x-0 top-0 z-50 w-full bg-charcoal shadow-[0_1px_0_0_rgba(245,240,230,0.08)]"
     >
       <div className="container-quarry flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
