@@ -23,8 +23,26 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/30" />
       </div>
 
-      {/* pt-32 clears the fixed header (announcement bar ~36px + nav ~64px = ~100px) + breathing room */}
-      <div className="container-quarry relative z-10 pb-16 pt-32 md:pb-24 md:pt-48">
+      <div
+        className="container-quarry relative z-10 pb-16 md:pb-24 md:pt-40"
+        style={{ paddingTop: "calc(env(safe-area-inset-top) + 7rem)" }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <Link
+            href="/blog/formerly-galvez-stone"
+            className="mb-5 inline-flex items-center gap-2 rounded-full border border-cream/25 bg-charcoal/40 px-4 py-1.5 backdrop-blur-sm transition-colors hover:border-terracotta/60"
+          >
+            <span className="text-xs font-semibold tracking-wide text-cream">
+              Formerly Galvez Stone
+            </span>
+            <span className="text-xs text-cream/60">— same quarry, new name</span>
+          </Link>
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
