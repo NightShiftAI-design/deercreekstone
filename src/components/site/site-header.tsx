@@ -54,7 +54,7 @@ export function SiteHeader() {
             priority
             className="size-11 shrink-0 md:size-12"
           />
-          <span className="hidden font-display text-lg font-semibold tracking-tight text-cream sm:inline">
+          <span className="font-display text-base font-semibold tracking-tight text-cream sm:text-lg">
             Deer Creek <span className="text-terracotta">Stone</span>
           </span>
         </Link>
