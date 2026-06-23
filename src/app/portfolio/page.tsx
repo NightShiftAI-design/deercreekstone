@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { site } from "@/lib/site.config";
 import { PortfolioGrid } from "@/components/site/portfolio-grid";
 import { StrataDivider } from "@/components/site/strata-divider";
@@ -13,8 +14,19 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   return (
     <>
-      <section className="bg-charcoal pb-20 pt-36 text-cream md:pb-28 md:pt-44">
-        <div className="container-quarry">
+      <section className="relative overflow-hidden bg-charcoal pb-20 pt-36 text-cream md:pb-28 md:pt-44">
+              {/* Watermark logo — absolutely positioned in right half, desktop only */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 items-end justify-center pb-0 lg:flex" style={{paddingBottom: "0", paddingTop: "25%"}}>
+          <Image
+            src="/images/brand/logo-white.png"
+            alt=""
+            aria-hidden="true"
+            width={400}
+            height={400}
+            className="size-72 opacity-10 xl:size-80"
+          />
+        </div>
+        <div className="container-quarry relative z-10">
           <p className="eyebrow mb-5 text-terracotta">Portfolio</p>
           <h1 className="max-w-2xl font-display text-5xl font-medium leading-[1.05] tracking-tight md:text-6xl">
             Built with

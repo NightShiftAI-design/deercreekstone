@@ -17,7 +17,7 @@ export default function ContactPage() {
     <>
       <section className="relative overflow-hidden bg-charcoal pb-20 pt-36 text-cream md:pb-28 md:pt-44">
         {/* Watermark logo — absolutely positioned in right half, desktop only */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 items-center justify-center lg:flex">
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 items-end justify-center lg:flex" style={{paddingBottom: "0", paddingTop: "25%"}}>
           <Image
             src="/images/brand/logo-white.png"
             alt=""
