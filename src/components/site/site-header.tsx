@@ -29,10 +29,28 @@ export function SiteHeader() {
 
   return (
     <header
-      className="fixed inset-x-0 top-0 z-50 w-full bg-charcoal shadow-[0_1px_0_0_rgba(245,240,230,0.08)]"
+      className="fixed inset-x-0 top-0 z-50 w-full bg-charcoal"
       style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
-      <div className="container-quarry flex h-20 items-center justify-between">
+      {/* Announcement bar — only on homepage */}
+      {pathname === "/" && (
+        <div className="w-full bg-charcoal border-b border-cream/10">
+          <div className="container-quarry flex items-center justify-center py-2">
+            <Link
+              href="/blog/formerly-galvez-stone"
+              className="inline-flex items-center gap-2 rounded-full border border-cream/25 bg-charcoal/60 px-4 py-1 transition-colors hover:border-terracotta/60"
+            >
+              <span className="text-xs font-semibold tracking-wide text-cream">
+                Formerly Galvez Stone
+              </span>
+              <span className="text-xs text-cream/60">— same quarry, new name</span>
+            </Link>
+          </div>
+        </div>
+      )}
+
+      {/* Main nav row */}
+      <div className="container-quarry flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/brand/logo-white.png"
