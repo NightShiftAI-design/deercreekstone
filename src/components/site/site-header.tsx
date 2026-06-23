@@ -30,6 +30,7 @@ export function SiteHeader() {
   return (
     <header
       className="fixed inset-x-0 top-0 z-50 w-full bg-charcoal shadow-[0_1px_0_0_rgba(245,240,230,0.08)]"
+      style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
       <div className="container-quarry flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
