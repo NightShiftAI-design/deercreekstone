@@ -1,11 +1,4 @@
-import type { Metadata, Viewport } from "next";
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  viewportFit: "cover",
-  themeColor: "#2c3e50",
-};
+import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site.config";
