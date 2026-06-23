@@ -23,7 +23,7 @@ export default function PortfolioPage() {
             aria-hidden="true"
             width={400}
             height={400}
-            className="size-72 opacity-10 xl:size-80"
+            className="h-[55%] w-auto opacity-10 max-h-72"
           />
         </div>
         <div className="container-quarry relative z-10">
