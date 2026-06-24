@@ -103,6 +103,8 @@ export const products: Product[] = [
       "/images/products/flagstone-1.jpg",
       "/images/products/flagstone-2.jpg",
       "/images/products/flagstone-3.jpg",
+      "/images/products/flagstone-4.jpg",
+      "/images/products/flagstone-5.jpg",
       "/images/quarry/quarry-flagstone-pallets.jpg",
     ],
     faqs: [
@@ -151,6 +153,11 @@ export const products: Product[] = [
       "/images/products/slabs-2.jpg",
       "/images/products/slabs-3.jpg",
       "/images/products/slabs-4.jpg",
+      "/images/products/slabs-5.jpg",
+      "/images/products/slabs-6.jpg",
+      "/images/products/slabs-7.jpg",
+      "/images/products/slabs-8.jpg",
+      "/images/products/slabs-9.jpg",
     ],
     faqs: [
       {
@@ -265,6 +272,44 @@ export const products: Product[] = [
         question: "How much wall stone do I need per linear foot of wall?",
         answer:
           "It depends on wall height and thickness, but as a starting point, plan on roughly 1 ton per 35–45 sq ft of wall face for a standard 12\" thick dry-stack wall. Tell us your wall dimensions and we'll help size the order more precisely.",
+      },
+    ],
+  },
+  {
+    slug: "rubble-strips",
+    name: "Rubble Strips & Ashlar",
+    shortName: "Rubble Strips",
+    tagline: "Thin-cut stone strips for wall veneer, fireplace surrounds & accent work",
+    description:
+      "Our rubble strips and ashlar are thin-cut pieces of Tennessee sandstone quarried specifically for veneer applications. Available in warm tan/buff tones and cool charcoal-gray, these pieces deliver the look of full-thickness stone at a fraction of the weight — ideal for interior accent walls, exterior facade work, fireplace surrounds, and column wraps.",
+    applications: ["Exterior wall veneer", "Interior accent walls", "Fireplace surrounds", "Column wraps", "Water features"],
+    specs: [
+      { label: "Thickness", value: \'1\" – 2.5\"\' },
+      { label: "Strip length", value: "Random, 4\"–18\"" },
+      { label: "Finish", value: "Natural cleft face" },
+      { label: "Color range", value: "Tan/buff, charcoal gray" },
+      { label: "Sold by", value: "Ton or pallet" },
+    ],
+    priceIndicator: "$$",
+    heroImage: "/images/products/rubble-strip-1.jpg",
+    heroBlurDataURL: "data:image/jpeg;base64,/9j/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoH8AQKDQwKCwsLDA0QEhANEBESCw==",
+    gallery: [
+      "/images/products/rubble-strip-1.jpg",
+      "/images/products/rubble-strip-2.jpg",
+      "/images/products/rubble-strip-3.jpg",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between rubble strips and ashlar?",
+        answer: "Rubble strips are irregular in shape with natural broken edges, giving a more rustic, handmade appearance. Ashlar is cut to more consistent rectangular shapes for a cleaner, coursed look. We carry both — call to see what\'s in stock.",
+      },
+      {
+        question: "Can these be used inside?",
+        answer: "Yes — thin veneer is popular for interior feature walls, fireplace surrounds, and kitchen backsplashes. The lighter weight makes installation easier and puts less load on interior walls.",
+      },
+      {
+        question: "Do I need a special adhesive or mortar for veneer?",
+        answer: "For interior applications, a polymer-modified thinset or veneer mortar works well. Exterior applications typically use a scratch-coat-and-mortar approach. Your mason will know the right method for your specific substrate.",
       },
     ],
   },
@@ -437,30 +482,6 @@ export const projects: Project[] = [
     image: "/images/projects/stone-veneer-wall.jpg",
     description:
       "A home build currently underway, using our stone as full-coverage exterior wall veneer.",
-  },
-  {
-    slug: "placeholder-4",
-    title: "Outdoor Fireplace — Cleveland",
-    category: "Fireplace",
-    location: "Cleveland, TN",
-    image: "/images/projects/project-4.jpg",
-    description: "Large-format slab fireplace surround, charcoal-gray stone.",
-  },
-  {
-    slug: "placeholder-5",
-    title: "Garden Walkway — Athens",
-    category: "Walkway",
-    location: "Athens, TN",
-    image: "/images/projects/project-5.jpg",
-    description: "Stepping-stone walkway through native landscaping.",
-  },
-  {
-    slug: "placeholder-6",
-    title: "Retaining Wall — Knoxville",
-    category: "Retaining Wall",
-    location: "Knoxville, TN",
-    image: "/images/projects/project-6.jpg",
-    description: "Dry-stacked retaining wall using slab off-cuts.",
   },
 ];
 

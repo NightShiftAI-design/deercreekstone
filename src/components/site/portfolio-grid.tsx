@@ -4,28 +4,20 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects, type Project } from "@/lib/site.config";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { cn } from "@/lib/utils";
 
-const categories: Array<Project["category"] | "All"> = [
-  "All",
-  "Patio",
-  "Walkway",
-  "Steps",
-  "Fireplace",
-  "Pool Deck",
-  "Retaining Wall",
-  "Wall Veneer",
-];
-
-// Remaining generic /images/projects/project-N.jpg paths are still
-// unfilled placeholders — fall back to PlaceholderImage for those
-// until real completed-install photos are provided.
-const isUnfilledPlaceholder = (path: string) =>
-  /\/images\/projects\/project-\d\.jpg$/.test(path);
+// Build category list dynamically from real projects only
+const allCategories: Array<Project["category"] | "All"> = ["All"];
+const seen = new Set<string>();
+for (const p of projects) {
+  if (!seen.has(p.category)) {
+    seen.add(p.category);
+    allCategories.push(p.category as Project["category"]);
+  }
+}
 
 export function PortfolioGrid() {
-  const [active, setActive] = useState<(typeof categories)[number]>("All");
+  const [active, setActive] = useState<(typeof allCategories)[number]>("All");
 
   const filtered = useMemo(
     () =>
@@ -42,7 +34,7 @@ export function PortfolioGrid() {
         role="group"
         aria-label="Filter projects by category"
       >
-        {categories.map((cat) => (
+        {allCategories.map((cat) => (
           <button
             key={cat}
             type="button"
@@ -73,17 +65,13 @@ export function PortfolioGrid() {
               className="group relative aspect-[4/3] overflow-hidden"
             >
               <div className="h-full w-full transition-transform duration-700 ease-out group-hover:scale-105">
-                {isUnfilledPlaceholder(project.image) ? (
-                  <PlaceholderImage label={project.title} />
-                ) : (
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover"
-                  />
-                )}
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover"
+                />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/15 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -99,12 +87,6 @@ export function PortfolioGrid() {
           ))}
         </AnimatePresence>
       </div>
-
-      {filtered.length === 0 && (
-        <p className="mt-10 text-center text-sm text-ink-soft">
-          No projects in this category yet — check back soon.
-        </p>
-      )}
     </div>
   );
 }
