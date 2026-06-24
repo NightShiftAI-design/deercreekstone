@@ -111,7 +111,7 @@ export const products: Product[] = [
       {
         question: "How much flagstone do I need for a patio?",
         answer:
-          "A good rule of thumb is one pallet per 120–150 sq ft for standard 1\"–2.5\" thickness, but actual coverage depends on the pattern (tight-fit vs. wide-joint) and waste from cutting irregular edges. Bring your square footage when you call and we'll help you size the order.",
+          'A good rule of thumb is one pallet per 120–150 sq ft for standard 1"–2.5" thickness, but actual coverage depends on the pattern (tight-fit vs. wide-joint) and waste from cutting irregular edges. Bring your square footage when you call and we\'ll help you size the order.',
       },
       {
         question: "Is Tennessee flagstone good for pool decks?",
@@ -163,7 +163,7 @@ export const products: Product[] = [
       {
         question: "What's the difference between slabs and flagstone?",
         answer:
-          "Flagstone is thinner (1\"–2.5\") and laid as multiple irregular pieces for patios and walkways. Slabs are thicker (2\"–6\"+), larger-format pieces used where fewer, bolder pieces read as premium — fireplace hearths, benches, tables, and statement walls.",
+          'Flagstone is thinner (1"–2.5") and laid as multiple irregular pieces for patios and walkways. Slabs are thicker (2"–6"+), larger-format pieces used where fewer, bolder pieces read as premium — fireplace hearths, benches, tables, and statement walls.',
       },
       {
         question: "Can slabs be used as an outdoor table or bench top?",
@@ -210,7 +210,7 @@ export const products: Product[] = [
       {
         question: "What depth tread do I need for outdoor stairs?",
         answer:
-          "12\" is standard for a typical residential rise/run, 14\"–16\" reads as a more generous, formal step, and we can cut custom depths for unusual stair geometry. Bring your stair width and total rise and we can help confirm the count.",
+          '12" is standard for a typical residential rise/run, 14"–16" reads as a more generous, formal step, and we can cut custom depths for unusual stair geometry. Bring your stair width and total rise and we can help confirm the count.',
       },
       {
         question: "Are stone treads slippery when wet?",
@@ -235,7 +235,7 @@ export const products: Product[] = [
     shortName: "Wall Stone",
     tagline: "Dry-stack and mortared stone for walls, benches & seating",
     description:
-      "Quarried in 14\"–16\" random lengths and hand-graded for clean, stackable faces, our wall stone is built for retaining walls, garden seat walls, and outdoor benches. Works equally well dry-stacked for a rustic look or mortared for a more formal, permanent build.",
+      "Quarried in 14\u2033\u201316\u2033 random lengths and hand-graded for clean, stackable faces, our wall stone is built for retaining walls, garden seat walls, and outdoor benches. Works equally well dry-stacked for a rustic look or mortared for a more formal, permanent build.",
     applications: ["Retaining walls", "Seat walls", "Benches", "Garden borders", "Mailbox & column surrounds"],
     specs: [
       { label: "Thickness", value: '3" – 6"' },
@@ -259,7 +259,7 @@ export const products: Product[] = [
           "Dry-stacked walls rely on careful fitting and gravity alone — no mortar — for a rustic look that also allows drainage through the wall, which is ideal for retaining walls. Mortared construction is more formal and permanent, typically used for seat walls, columns, and walls near structures.",
       },
       {
-        question: "Why 14\"–16\" random lengths specifically?",
+        question: "Why 14\u2033\u201316\u2033 random lengths specifically?",
         answer:
           "That range gives a wall enough variation to look natural and hand-built while staying long enough to tie courses together for real structural stability — shorter pieces alone tend to look choppy and aren't as stable when dry-stacked.",
       },
@@ -271,7 +271,7 @@ export const products: Product[] = [
       {
         question: "How much wall stone do I need per linear foot of wall?",
         answer:
-          "It depends on wall height and thickness, but as a starting point, plan on roughly 1 ton per 35–45 sq ft of wall face for a standard 12\" thick dry-stack wall. Tell us your wall dimensions and we'll help size the order more precisely.",
+          "It depends on wall height and thickness, but as a starting point, plan on roughly 1 ton per 35\u201345 sq ft of wall face for a standard 12\u2033 thick dry-stack wall. Tell us your wall dimensions and we'll help size the order more precisely.",
       },
     ],
   },
@@ -284,8 +284,8 @@ export const products: Product[] = [
       "Our rubble strips and ashlar are thin-cut pieces of Tennessee sandstone quarried specifically for veneer applications. Available in warm tan/buff tones and cool charcoal-gray, these pieces deliver the look of full-thickness stone at a fraction of the weight — ideal for interior accent walls, exterior facade work, fireplace surrounds, and column wraps.",
     applications: ["Exterior wall veneer", "Interior accent walls", "Fireplace surrounds", "Column wraps", "Water features"],
     specs: [
-      { label: "Thickness", value: \'1\" – 2.5\"\' },
-      { label: "Strip length", value: "Random, 4\"–18\"" },
+      { label: "Thickness", value: '1" – 2.5"' },
+      { label: "Strip length", value: 'Random, 4"–18"' },
       { label: "Finish", value: "Natural cleft face" },
       { label: "Color range", value: "Tan/buff, charcoal gray" },
       { label: "Sold by", value: "Ton or pallet" },
@@ -301,7 +301,7 @@ export const products: Product[] = [
     faqs: [
       {
         question: "What is the difference between rubble strips and ashlar?",
-        answer: "Rubble strips are irregular in shape with natural broken edges, giving a more rustic, handmade appearance. Ashlar is cut to more consistent rectangular shapes for a cleaner, coursed look. We carry both — call to see what\'s in stock.",
+        answer: "Rubble strips are irregular in shape with natural broken edges, giving a more rustic, handmade appearance. Ashlar is cut to more consistent rectangular shapes for a cleaner, coursed look. We carry both — call to see what's in stock.",
       },
       {
         question: "Can these be used inside?",
@@ -322,7 +322,7 @@ export const products: Product[] = [
       "Our Tennessee stone steps are cut to order in a range of sizes and thicknesses, offering a natural alternative to poured concrete or manufactured block. Each step carries the same warm color variation as our flagstone, with a natural cleft top for built-in slip resistance.",
     applications: ["Exterior staircases", "Garden steps", "Landscape terracing", "Entry approaches", "Retaining wall caps"],
     specs: [
-      { label: "Thickness", value: \'4\" – 7\" (cut to order)\' },
+      { label: "Thickness", value: '4" – 7" (cut to order)' },
       { label: "Finish", value: "Natural cleft top, sawn sides" },
       { label: "Color range", value: "Tan, buff, rust, gray-brown" },
       { label: "Sold by", value: "Piece or linear foot" },
@@ -341,11 +341,11 @@ export const products: Product[] = [
     faqs: [
       {
         question: "What sizes do your stone steps come in?",
-        answer: "We cut steps in a range of standard sizes and can accommodate custom dimensions. Common tread depths run 12\"–18\" and widths from 36\" up to 6\'+. Call or email with your measurements and we\'ll confirm what we have ready or what lead time looks like for a cut order.",
+        answer: `We cut steps in a range of standard sizes and can accommodate custom dimensions. Common tread depths run 12"–18" and widths from 36" up to 6'+. Call or email with your measurements and we'll confirm what we have ready or what lead time looks like for a cut order.`,
       },
       {
         question: "How thick should a stone step be?",
-        answer: "For most residential applications, 4\"–5\" is standard and handles normal foot traffic well. For heavier commercial use or longer spans, 6\"–7\" is safer.",
+        answer: 'For most residential applications, 4"–5" is standard and handles normal foot traffic well. For heavier commercial use or longer spans, 6"–7" is safer.',
       },
       {
         question: "Can these be installed over existing concrete steps?",
@@ -362,8 +362,8 @@ export const products: Product[] = [
       "Our tumbled cobblestone is hand-graded Tennessee stone that has been tumbled to soften edges and achieve a naturally worn, old-world character. Available in sandy tan and charcoal gray tones, popular for cottage driveways, European-style courtyard paving, and garden path edging.",
     applications: ["Driveways", "Courtyard paving", "Garden paths", "Border edging", "Wall accents"],
     specs: [
-      { label: "Size range", value: "3\"–6\" faces (irregular)" },
-      { label: "Thickness", value: \'2\" – 4\"\' },
+      { label: "Size range", value: '3"–6" faces (irregular)' },
+      { label: "Thickness", value: '2" – 4"' },
       { label: "Finish", value: "Tumbled — softened edges, worn texture" },
       { label: "Color range", value: "Sandy tan, gray-brown, charcoal" },
       { label: "Sold by", value: "Ton or pallet" },
@@ -382,7 +382,7 @@ export const products: Product[] = [
       },
       {
         question: "Can cobblestone handle vehicle traffic?",
-        answer: "Yes — properly installed on a compacted base (typically 6\"–8\" compacted gravel) cobblestone handles vehicle traffic well and has done so for centuries.",
+        answer: 'Yes — properly installed on a compacted base (typically 6"–8" compacted gravel) cobblestone handles vehicle traffic well and has done so for centuries.',
       },
       {
         question: "Do you have both tan and gray available?",
@@ -399,9 +399,9 @@ export const products: Product[] = [
       "Cut directly at our Graysville quarry, our fire pit rings and stone tables are one-of-a-kind pieces no home center carries. Fire pit rings are available in tan sandstone and charcoal gray with a center opening for wood or gas fire features. Stone tables are crafted from large-format slabs set on hand-shaped stone pedestals.",
     applications: ["Outdoor fire pits", "Patio fire features", "Outdoor dining tables", "Gathering areas", "Resort & hospitality"],
     specs: [
-      { label: "Fire pit ring sizes", value: "24\" – 60\" OD (custom available)" },
-      { label: "Table top diameter", value: "36\" – 72\"" },
-      { label: "Stone thickness", value: \'3\" – 6\"\' },
+      { label: "Fire pit ring sizes", value: '24" – 60" OD (custom available)' },
+      { label: "Table top diameter", value: '36" – 72"' },
+      { label: "Stone thickness", value: '3" – 6"' },
       { label: "Colors", value: "Tan sandstone, charcoal gray, mixed" },
       { label: "Sold by", value: "Piece — call for current inventory" },
     ],
@@ -419,15 +419,15 @@ export const products: Product[] = [
     faqs: [
       {
         question: "Are fire pit rings custom cut or standard sizes?",
-        answer: "We carry a range of sizes in current inventory and can cut custom dimensions on request. Call us with your target outer diameter and we\'ll let you know what\'s available.",
+        answer: "We carry a range of sizes in current inventory and can cut custom dimensions on request. Call us with your target outer diameter and we'll let you know what's available.",
       },
       {
         question: "Can the stone tables be left outside year-round?",
-        answer: "Yes — same Tennessee sandstone we use for all outdoor applications. Handles freeze-thaw cycles well and doesn\'t require sealing, though sealing will enhance color.",
+        answer: "Yes — same Tennessee sandstone we use for all outdoor applications. Handles freeze-thaw cycles well and doesn't require sealing, though sealing will enhance color.",
       },
       {
         question: "How heavy are the stone tables?",
-        answer: "A typical 48\" diameter table top runs 300–500 lbs depending on thickness. We can help coordinate delivery and placement logistics.",
+        answer: 'A typical 48" diameter table top runs 300–500 lbs depending on thickness. We can help coordinate delivery and placement logistics.',
       },
       {
         question: "Is inventory updated online?",
