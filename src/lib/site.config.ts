@@ -21,7 +21,7 @@ export const site = {
   phone2Href: "tel:+14233687583",
   email: "daytongalvez@aol.com",
   address: {
-    street: "43 Galvez Road",
+    street: "43 Galvez Ranch",
     city: "Graysville",
     state: "TN",
     zip: "37338",
@@ -265,6 +265,128 @@ export const products: Product[] = [
         question: "How much wall stone do I need per linear foot of wall?",
         answer:
           "It depends on wall height and thickness, but as a starting point, plan on roughly 1 ton per 35–45 sq ft of wall face for a standard 12\" thick dry-stack wall. Tell us your wall dimensions and we'll help size the order more precisely.",
+      },
+    ],
+  },
+  {
+    slug: "steps",
+    name: "Tennessee Stone Steps",
+    shortName: "Steps",
+    tagline: "Cut stone steps in multiple sizes for any staircase or landscape",
+    description:
+      "Our Tennessee stone steps are cut to order in a range of sizes and thicknesses, offering a natural alternative to poured concrete or manufactured block. Each step carries the same warm color variation as our flagstone, with a natural cleft top for built-in slip resistance.",
+    applications: ["Exterior staircases", "Garden steps", "Landscape terracing", "Entry approaches", "Retaining wall caps"],
+    specs: [
+      { label: "Thickness", value: \'4\" – 7\" (cut to order)\' },
+      { label: "Finish", value: "Natural cleft top, sawn sides" },
+      { label: "Color range", value: "Tan, buff, rust, gray-brown" },
+      { label: "Sold by", value: "Piece or linear foot" },
+    ],
+    priceIndicator: "$$",
+    heroImage: "/images/products/steps-1.jpg",
+    heroBlurDataURL: "data:image/jpeg;base64,/9j/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoH8AQKDQwKCwsLDA0QEhANEBESCw==",
+    gallery: [
+      "/images/products/steps-1.jpg",
+      "/images/products/steps-2.jpg",
+      "/images/products/steps-3.jpg",
+      "/images/products/steps-4.jpg",
+      "/images/products/steps-5.jpg",
+      "/images/products/steps-6.jpg",
+    ],
+    faqs: [
+      {
+        question: "What sizes do your stone steps come in?",
+        answer: "We cut steps in a range of standard sizes and can accommodate custom dimensions. Common tread depths run 12\"–18\" and widths from 36\" up to 6\'+. Call or email with your measurements and we\'ll confirm what we have ready or what lead time looks like for a cut order.",
+      },
+      {
+        question: "How thick should a stone step be?",
+        answer: "For most residential applications, 4\"–5\" is standard and handles normal foot traffic well. For heavier commercial use or longer spans, 6\"–7\" is safer.",
+      },
+      {
+        question: "Can these be installed over existing concrete steps?",
+        answer: "Yes — stone steps are commonly set over an existing concrete base using a mortar bed. The existing structure handles the load; the stone provides the finished surface and aesthetic.",
+      },
+    ],
+  },
+  {
+    slug: "cobblestone",
+    name: "Tumbled Cobblestone",
+    shortName: "Cobblestone",
+    tagline: "Rustic tumbled stone for driveways, paths & garden edging",
+    description:
+      "Our tumbled cobblestone is hand-graded Tennessee stone that has been tumbled to soften edges and achieve a naturally worn, old-world character. Available in sandy tan and charcoal gray tones, popular for cottage driveways, European-style courtyard paving, and garden path edging.",
+    applications: ["Driveways", "Courtyard paving", "Garden paths", "Border edging", "Wall accents"],
+    specs: [
+      { label: "Size range", value: "3\"–6\" faces (irregular)" },
+      { label: "Thickness", value: \'2\" – 4\"\' },
+      { label: "Finish", value: "Tumbled — softened edges, worn texture" },
+      { label: "Color range", value: "Sandy tan, gray-brown, charcoal" },
+      { label: "Sold by", value: "Ton or pallet" },
+    ],
+    priceIndicator: "$$",
+    heroImage: "/images/products/cobblestone-1.jpg",
+    heroBlurDataURL: "data:image/jpeg;base64,/9j/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoH8AQKDQwKCwsLDA0QEhANEBESCw==",
+    gallery: [
+      "/images/products/cobblestone-1.jpg",
+      "/images/products/cobblestone-2.jpg",
+    ],
+    faqs: [
+      {
+        question: "What makes tumbled cobblestone different from regular flagstone?",
+        answer: "Flagstone lays flat for surface paving. Cobblestone is thicker, more cube-like, and has been tumbled to round off edges and give it that weathered old-world character. Cobble is typically set upright or semi-upright in a bed of compacted gravel or mortar.",
+      },
+      {
+        question: "Can cobblestone handle vehicle traffic?",
+        answer: "Yes — properly installed on a compacted base (typically 6\"–8\" compacted gravel) cobblestone handles vehicle traffic well and has done so for centuries.",
+      },
+      {
+        question: "Do you have both tan and gray available?",
+        answer: "Yes — we carry both sandy tan and charcoal gray tones. Supply varies so call ahead to confirm current stock.",
+      },
+    ],
+  },
+  {
+    slug: "fire-pit-rings-tables",
+    name: "Fire Pit Rings & Stone Tables",
+    shortName: "Fire Pits & Tables",
+    tagline: "Custom-cut fire pit rings and solid stone tables, quarry-direct",
+    description:
+      "Cut directly at our Graysville quarry, our fire pit rings and stone tables are one-of-a-kind pieces no home center carries. Fire pit rings are available in tan sandstone and charcoal gray with a center opening for wood or gas fire features. Stone tables are crafted from large-format slabs set on hand-shaped stone pedestals.",
+    applications: ["Outdoor fire pits", "Patio fire features", "Outdoor dining tables", "Gathering areas", "Resort & hospitality"],
+    specs: [
+      { label: "Fire pit ring sizes", value: "24\" – 60\" OD (custom available)" },
+      { label: "Table top diameter", value: "36\" – 72\"" },
+      { label: "Stone thickness", value: \'3\" – 6\"\' },
+      { label: "Colors", value: "Tan sandstone, charcoal gray, mixed" },
+      { label: "Sold by", value: "Piece — call for current inventory" },
+    ],
+    priceIndicator: "$$$",
+    heroImage: "/images/products/fire-pit-ring-1.jpg",
+    heroBlurDataURL: "data:image/jpeg;base64,/9j/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoH8AQKDQwKCwsLDA0QEhANEBESCw==",
+    gallery: [
+      "/images/products/fire-pit-ring-1.jpg",
+      "/images/products/fire-pit-ring-2.jpg",
+      "/images/products/fire-pit-ring-3.jpg",
+      "/images/products/stone-table-1.jpg",
+      "/images/products/stone-table-2.jpg",
+      "/images/products/stone-table-3.jpg",
+    ],
+    faqs: [
+      {
+        question: "Are fire pit rings custom cut or standard sizes?",
+        answer: "We carry a range of sizes in current inventory and can cut custom dimensions on request. Call us with your target outer diameter and we\'ll let you know what\'s available.",
+      },
+      {
+        question: "Can the stone tables be left outside year-round?",
+        answer: "Yes — same Tennessee sandstone we use for all outdoor applications. Handles freeze-thaw cycles well and doesn\'t require sealing, though sealing will enhance color.",
+      },
+      {
+        question: "How heavy are the stone tables?",
+        answer: "A typical 48\" diameter table top runs 300–500 lbs depending on thickness. We can help coordinate delivery and placement logistics.",
+      },
+      {
+        question: "Is inventory updated online?",
+        answer: "Not currently — fire pit rings and tables are one-of-a-kind inventory that moves fast. Call or email us for current stock, or come out to the quarry and pick in person.",
       },
     ],
   },
