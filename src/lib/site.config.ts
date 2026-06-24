@@ -21,7 +21,7 @@ export const site = {
   phone2Href: "tel:+14233687583",
   email: "daytongalvez@aol.com",
   address: {
-    street: "43 Galvez Ranch",
+    street: "3348 Brayton Road",
     city: "Graysville",
     state: "TN",
     zip: "37338",

@@ -147,7 +147,7 @@ export default function ContactPage() {
                 <div className="aspect-[4/3] w-full border border-ink/10 bg-cream-warm">
                   <iframe
                     title="Deer Creek Stone — 43 Galvez Ranch, Graysville TN"
-                    src="https://www.google.com/maps?f=q&source=s_q&q=43+Galvez+Ranch,+Graysville,+TN+37338&iwloc=addr&output=embed"
+                    src="https://www.google.com/maps?f=q&source=s_q&q=3348+Brayton+Road,+Graysville,+TN+37338&iwloc=addr&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
